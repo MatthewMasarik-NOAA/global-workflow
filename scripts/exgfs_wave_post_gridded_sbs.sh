@@ -244,7 +244,7 @@
 # Contingency for RERUN=YES
   if [ "${RERUN}" = "YES" ]; then
     fhr=$((FHRUN + FHMIN_WAV))
-    if [ $FHMAX_HF_WAV -gt 0 ] && [ $FHOUT_HF_WAV -gt 0 ] && [ $fhr -lt $FHMAX_HF_WAV ]; then
+    if [[ $FHMAX_HF_WAV -gt 0 ]] && [[ $FHOUT_HF_WAV -gt 0 ]] && [[ $fhr -lt $FHMAX_HF_WAV ]]; then
       FHINCG=$FHOUT_HF_WAV
     else
       FHINCG=$FHOUT_WAV
@@ -433,7 +433,7 @@
         err=5; export err;${errchk}
         exit $err
       fi
-      if [ $FHMAX_HF_WAV -gt 0 ] && [ $FHOUT_HF_WAV -gt 0 ] && [ $fhr -lt $FHMAX_HF_WAV ]; then
+      if [[ $FHMAX_HF_WAV -gt 0 ]] && [[ $FHOUT_HF_WAV -gt 0 ]] && [[ $fhr -lt $FHMAX_HF_WAV ]]; then
         FHINCG=$FHOUT_HF_WAV
       else
         FHINCG=$FHOUT_WAV
