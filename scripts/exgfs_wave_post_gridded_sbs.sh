@@ -63,8 +63,7 @@
   if [ -z ${NTASKS} ]
   then
     echo "FATAL ERROR: requires NTASKS to be set "
-    err=1; export err;${errchk}                         ### MTM: TODO - is this right?
-                                                        ### MTM:   should it be?:  export errchk=$err
+    err=1; export err;${errchk}
     exit $err
   fi
 
