@@ -488,7 +488,7 @@ if [ $cplwav = ".true." ]; then
     HMS="$(echo $YMDH | cut -c9-10)0000"
       for wavGRD in ${waveGRD} ; do
           eval $NLN $datwave/${wavprfx}.out_grd.${wavGRD}.${YMD}.${HMS} ${YMD}.${HMS}.out_grd.${wavGRD}
-          eval $NLN $datwave/${wavprfx}.out_grd.${wavGRD}.${YMD}.${HMS} ${YMD}.${HMS}.out_grd.${wavGRD}.FINISHED
+          eval $NLN $datwave/${wavprfx}.out_grd.${wavGRD}.${YMD}.${HMS}.FINISHED ${YMD}.${HMS}.out_grd.${wavGRD}.FINISHED
       done
       FHINC=$FHOUT_WAV
       if [ $FHMAX_HF_WAV -gt 0 -a $FHOUT_HF_WAV -gt 0 -a $fhr -lt $FHMAX_HF_WAV ]; then
